@@ -1,0 +1,11 @@
+import qrcode
+
+data = "hello, world!"
+
+qr = qrcode.QRCode(version=5, box_size=15, border=10)
+
+qr.add_data(data)
+
+ing = qr.make_image()
+
+ing.save("test.png")
